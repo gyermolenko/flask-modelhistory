@@ -9,7 +9,7 @@ setup(
     author='gyermolenko',
     author_email='gyermolenko@gmail.com',
     description='Track changes in instances of sqlalchemy db model',
-    py_modules=['flask_modelhistory'],
+    packages=['flask_modelhistory'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
