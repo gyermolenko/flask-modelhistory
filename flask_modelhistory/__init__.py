@@ -39,7 +39,7 @@ class History(object):
                                 .order_by(HistoryModel.date)
             return render_template('history.html', history=history)
 
-        return redirect(url_for('home'))
+        return redirect(url_for('/'))
 
 
     def tracker(self, mapper, connection, target, db_alias='some_object', fields=None, is_new=False):
