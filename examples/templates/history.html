@@ -1,0 +1,28 @@
+<html>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Initiator</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rec in history %}
+                <tr>
+                    <td>{{ rec.date.strftime('%Y-%m-%d %H:%M') }}</td>
+                    <td>>#{{ rec.user_id }}</td>
+                    <td>
+                        {% for k, v in rec.data.items() %}
+                            <strong>{{ k|replace("_", " ")|capitalize }}:</strong> <span>{{ v }}</span><br>
+                        {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
